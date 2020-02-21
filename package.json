@@ -1,7 +1,7 @@
 {
   "name": "@dobromyslov/datetime-utils",
-  "version": "1.0.0",
-  "description": "Date and time utils for parsing dates from various APIs",
+  "version": "1.0.2",
+  "description": "Date and time utils for parsing dates and timestamps from various APIs.",
   "license": "MIT",
   "repository": {
     "type": "Github",
@@ -38,6 +38,7 @@
     "eslint-config-xo-typescript": "^0.26.0",
     "jasmine": "^3.5.0",
     "jasmine-ts": "^0.3.0",
+    "np": "^6.1.0",
     "nyc": "^15.0.0",
     "source-map-support": "^0.5.16",
     "ts-node": "^8.6.2",
@@ -88,5 +89,8 @@
       "text",
       "text-summary"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

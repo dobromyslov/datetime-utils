@@ -12,7 +12,7 @@ const utcZone = IANAZone.create('UTC');
  * @param russianDate format dd.MM.yyyy
  */
 export function parseRussianDate(russianDate: string): DateTime {
-  return DateTime.fromFormat(russianDate, 'dd.MM.yyyy');
+  return DateTime.fromFormat(russianDate, 'dd.MM.yyyy', {zone: utcZone});
 }
 
 /**

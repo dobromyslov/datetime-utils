@@ -39,9 +39,9 @@ export function parseRussianDateTime(russianDateTime: string, zone: Zone = utcZo
 }
 
 /**
- * Parses time into Luxon DateTime
+ * Parses time into Luxon DateTime.
  * @param time format HH:mm:ss or HH:mm
- * @param zone [optional] time zone. Default = Europe/Moscow.
+ * @param zone [optional] time zone. Default = UTC.
  */
 export function parseTime(time: string, zone: Zone = utcZone): DateTime | null {
   return parseRussianDateTime('01.01.1970 ' + time, zone);

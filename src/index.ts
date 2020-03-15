@@ -1,6 +1,10 @@
-import {DateTime, IANAZone, Zone} from 'luxon';
+import {DateTime, IANAZone, Zone, Settings as LuxonSettings} from 'luxon';
+
+// Throw exception in case of error
+LuxonSettings.throwOnInvalid = true;
 
 const utcZone = IANAZone.create('UTC');
+
 
 /**
  * Parses russian date into Luxon DateTime.

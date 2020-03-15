@@ -16,7 +16,7 @@ export function parseRussianDate(russianDate: string, zone: Zone = utcZone): Dat
  * @param russianDateTime format dd.MM.yyyy HH:mm:ss or dd.MM.yyyy HH:mm. Example: 30.01.2019 23:59:59
  * @param zone [optional] time zone. Default = Europe/Moscow.
  */
-export function parseRussianDateTime(russianDateTime: string, zone: Zone = utcZone): DateTime | null {
+export function parseRussianDateTime(russianDateTime: string, zone: Zone = utcZone): DateTime {
   const datetimeParts = russianDateTime.split(' ');
   if (datetimeParts.length > 1) {
     const timeParts = datetimeParts[1].split(':');

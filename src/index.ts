@@ -4,11 +4,12 @@ const utcZone = IANAZone.create('UTC');
 
 /**
  * Parses russian date into Luxon DateTime.
+ * Always in UTC timezone for unification.
+ *
  * @param russianDate format dd.MM.yyyy
- * @param zone [optional] time zone. Default = Europe/Moscow.
  */
-export function parseRussianDate(russianDate: string, zone: Zone = utcZone): DateTime {
-  return DateTime.fromFormat(russianDate, 'dd.MM.yyyy', {zone});
+export function parseRussianDate(russianDate: string): DateTime {
+  return DateTime.fromFormat(russianDate, 'dd.MM.yyyy');
 }
 
 /**
@@ -29,7 +30,9 @@ export function parseRussianDateTime(russianDateTime: string, zone: Zone = utcZo
     }
   }
 
-  return parseRussianDate(russianDateTime, zone);
+  // If there is no time part then parse date
+  // Dates are always unified in UTC timezone
+  return parseRussianDate(russianDateTime);
 }
 
 /**

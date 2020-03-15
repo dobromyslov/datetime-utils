@@ -29,7 +29,7 @@ export function parseRussianDateTime(russianDateTime: string, zone: Zone = utcZo
     }
   }
 
-  return null;
+  return parseRussianDate(russianDateTime, zone);
 }
 
 /**

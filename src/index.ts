@@ -8,7 +8,7 @@ const utcZone = IANAZone.create('UTC');
  * @param zone [optional] time zone. Default = Europe/Moscow.
  */
 export function parseRussianDate(russianDate: string, zone: Zone = utcZone): DateTime {
-  return DateTime.fromFormat(russianDate, 'dd.MM.yyyy', {zone}).toUTC();
+  return DateTime.fromFormat(russianDate, 'dd.MM.yyyy', {zone});
 }
 
 /**
@@ -21,11 +21,11 @@ export function parseRussianDateTime(russianDateTime: string, zone: Zone = utcZo
   if (datetimeParts.length > 1) {
     const timeParts = datetimeParts[1].split(':');
     if (timeParts.length === 2) {
-      return DateTime.fromFormat(russianDateTime, 'dd.MM.yyyy HH:mm', {zone}).toUTC();
+      return DateTime.fromFormat(russianDateTime, 'dd.MM.yyyy HH:mm', {zone});
     }
 
     if (timeParts.length === 3) {
-      return DateTime.fromFormat(russianDateTime, 'dd.MM.yyyy HH:mm:ss', {zone}).toUTC();
+      return DateTime.fromFormat(russianDateTime, 'dd.MM.yyyy HH:mm:ss', {zone});
     }
   }
 

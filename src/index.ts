@@ -5,7 +5,6 @@ LuxonSettings.throwOnInvalid = true;
 
 const utcZone = IANAZone.create('UTC');
 
-
 /**
  * Parses russian date into Luxon DateTime.
  * Always in UTC timezone for unification.

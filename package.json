@@ -20,7 +20,7 @@
   "sideEffects": false,
   "scripts": {
     "test": "xo && tsc --noEmit && nyc jasmine-ts",
-    "release": "np",
+    "release": "npm run build && np --no-publish && npm publish",
     "build": "del-cli dist && tsc",
     "prepare": "npm run build"
   },

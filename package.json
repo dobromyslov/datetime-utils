@@ -20,29 +20,28 @@
   "sideEffects": false,
   "scripts": {
     "test": "xo && tsc --noEmit && nyc jasmine-ts",
-    "release": "npm run build && np --no-publish && npm publish",
-    "build": "del-cli dist && tsc",
-    "prepare": "npm run build"
+    "release": "npm run build && np",
+    "build": "del-cli dist && tsc"
   },
   "dependencies": {
-    "luxon": "^1.22.0"
+    "luxon": "^1.22.2"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@types/jasmine": "^3.5.5",
-    "@types/luxon": "^1.21.0",
-    "@typescript-eslint/eslint-plugin": "^2.20.0",
-    "@typescript-eslint/parser": "^2.20.0",
+    "@types/jasmine": "^3.5.10",
+    "@types/luxon": "^1.22.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
     "del-cli": "^3.0.0",
     "eslint-config-xo": "^0.29.1",
     "eslint-config-xo-typescript": "^0.26.0",
     "jasmine": "^3.5.0",
     "jasmine-ts": "^0.3.0",
-    "np": "^6.1.0",
+    "np": "^6.2.0",
     "nyc": "^15.0.0",
     "source-map-support": "^0.5.16",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3",
     "xo": "^0.26.1"
   },
   "eslintConfig": {
@@ -91,6 +90,7 @@
     ]
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   }
 }
